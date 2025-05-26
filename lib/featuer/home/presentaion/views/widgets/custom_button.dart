@@ -7,11 +7,13 @@ class CustomButton extends StatelessWidget {
     required this.titleColor,
     required this.title,
     required this.borderRadius,
+    this.onPressed,
   });
   final Color backgroundColor;
   final Color titleColor;
   final String title;
   final BorderRadius borderRadius;
+  final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,7 +25,7 @@ class CustomButton extends StatelessWidget {
             borderRadius: borderRadius,
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           title,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
