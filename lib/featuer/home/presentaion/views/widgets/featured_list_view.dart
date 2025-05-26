@@ -35,9 +35,13 @@ class FeaturedListView extends StatelessWidget {
             ),
           );
         } else if (state is FeaturedBooksFailure) {
-          return Center(child: Text(state.errMessage));
+          return SizedBox(
+              height: MediaQuery.sizeOf(context).height * .28,
+              child: Center(child: Text(state.errMessage)));
         } else {
-          return const Center(child: CircularProgressIndicator());
+          return SizedBox(
+              height: MediaQuery.sizeOf(context).height * .28,
+              child: const Center(child: CircularProgressIndicator()));
         }
       },
     );
