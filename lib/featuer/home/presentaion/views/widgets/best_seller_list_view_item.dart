@@ -14,7 +14,7 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.bookDetails);
+        GoRouter.of(context).push(AppRouter.bookDetails, extra: bookModel);
       },
       child: SizedBox(
         height: 120,
